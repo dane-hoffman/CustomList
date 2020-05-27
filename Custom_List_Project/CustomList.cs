@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Custom_List_Project
 {
-    public class CustomList
+    public class CustomList<T>
     {
 
     }

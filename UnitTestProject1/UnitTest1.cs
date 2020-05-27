@@ -11,10 +11,10 @@ namespace UnitTestProject1
         private void Create_Array()
         {
             //Arrange
-            CustomList customList = new CustomList();
+            CustomList<int> customList = new CustomList<int>();
 
             //Act
-            customList = new CustomList();
+            customList = new CustomList<int>();
 
             //Assert
             Assert.IsNotNull(customList);
@@ -26,18 +26,18 @@ namespace UnitTestProject1
         private void Confirm_Array_Capacity()
         {
             //Arrange
-            CustomList customList = new CustomList();
+            CustomList<int> customList = new CustomList<int>();
             
-            double capacity = 4;
-            double expectedCapacity = capacity;
+            // double capacity = 4;
+            double expectedCapacity = 4;
             double actualCapacity;
-            double index = capacity;
+            // double index = capacity;
 
             //Act
-            actualCapacity = expectedCapacity - capacity;
+            actualCapacity = customList.Capacity;
 
             //Assert
-            Assert.AreEqual(actualCapacity, capacity);
+            Assert.AreEqual(actualCapacity, expectedCapacity);
 
         }
 
@@ -46,18 +46,28 @@ namespace UnitTestProject1
         private void Increase_Array_Capacity()
         {
             //Arrange
-            CustomList customList = new CustomList();
-            double capacity = 4;
-            double increaseIndex;
-            bool indexDoesIncrease = true;
+            CustomList<int> customList = new CustomList<int>();
+            int expected = 8;
+            int actual;
 
             //Act
-            increaseIndex = capacity ++;
+            customList.Add(2);
+            customList.Add(3);
+            customList.Add(4);
+            customList.Add(5);
+            customList.Add(1);
 
+            actual = customList.Capacity;
 
             //Assert
-            Assert.IsTrue(indexDoesIncrease);
+            Assert.AreEqual(expected, actual);
         }
+
+        // test that Count goes up
+        // test that adding first item added goes to index 0
+        // test that 
+
+
 
 
 
@@ -66,13 +76,19 @@ namespace UnitTestProject1
         {
 
             //Arrange
-            CustomList customList = new CustomList();
+            CustomList<int> customList = new CustomList<int>();
             double capacity = 4;
             double decreaseIndex;
             bool indexDoesDecrease = true;
+            customList.Add(2);
+            customList.Add(3);
+            customList.Add(4);
+            customList.Add(5);
+            customList.Add(1);
 
             //Act
             decreaseIndex = capacity--;
+            customList.Remove(3);
 
             //Assert
             Assert.IsTrue(indexDoesDecrease);
