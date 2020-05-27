@@ -10,7 +10,7 @@ namespace Custom_List_Project
     public class CustomList<T>
     {
 
-        public double capacity;
+        public double capacity = 0;
         public double count;
         public double index;
         public T item;
@@ -43,10 +43,13 @@ namespace Custom_List_Project
             //based on the starting value always being 4, then as count increases so does capacity
         public void CreateArrayCapacity()
         {
-            CustomList<T> capacity = new CustomList<T>();
+            //CustomList<T> capacity = new CustomList<T>();
 
-            for (capacity = 0;  )
-            capacity = 
+            while (capacity <= 0)
+            {
+                capacity = 4;
+            }
+            
 
 
         }
