@@ -96,32 +96,5 @@ namespace UnitTestProject1
 
 
 
-        //[TestMethod]
-        //private void Remove_Array_Capacity()
-        //{
-
-        //    //Arrange
-        //    CustomList<int> customList = new CustomList<int>();
-        //    double capacity = 4;
-        //    double decreaseIndex;
-        //    bool indexDoesDecrease = true;
-        //    customList.Add(2);
-        //    customList.Add(3);
-        //    customList.Add(4);
-        //    customList.Add(5);
-        //    customList.Add(1);
-
-        //    //Act
-        //    decreaseIndex = capacity--;
-        //    customList.Remove(3);
-
-        //    //Assert
-        //    Assert.IsTrue(indexDoesDecrease);
-
-
-        //}
-
-
-
     }
 }
