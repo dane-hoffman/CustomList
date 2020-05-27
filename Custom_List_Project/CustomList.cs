@@ -9,5 +9,23 @@ namespace Custom_List_Project
     public class CustomList<T>
     {
 
+        double capacity;
+        double count;
+        double index;
+        Array customList;
+
+
+
+        public CustomList()
+        {
+            Array customListArray = new Array[4];
+         
+
+
+        }
+
+
+
+
     }
 }
