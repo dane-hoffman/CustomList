@@ -45,11 +45,12 @@ namespace UnitTestProject1
         [TestMethod]
         private void Increase_Array_Capacity()
         {
+
             //Arrange
             CustomList<int> customList = new CustomList<int>();
 
-            int expected = 8;
-            int actual;
+            double expectedCapacity = 8;
+            double actualCapacity;
 
             //Act
             customList.Add(2);
@@ -58,10 +59,10 @@ namespace UnitTestProject1
             customList.Add(5);
             customList.Add(1);
 
-            actual = customList.Capacity;
+            actualCapacity = customList.capacity;
 
             //Assert
-            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(expectedCapacity, actualCapacity);
         }
 
         //Test to confirm correct Array Count---i.e. number of present items in available "memory slots"
@@ -88,12 +89,32 @@ namespace UnitTestProject1
 
         }
 
-        // test that Count goes up
+        [TestMethod]
+        private void ConfirmCountIncrease()
+        {
+            //Arrange
+            CustomList<int> customList = new CustomList<int>();
+
+            double expectedCount;
+            double actualCount;
+
+            //Act
+            actualCount == expectedCount;
+
+            //Assert
+            Assert.AreEqual(actualCount, expectedCount);
+
+
+
+        }
+
+
+        
         // test that adding first item added goes to index 0
         // test that 
 
 
-
+        
 
 
     }
