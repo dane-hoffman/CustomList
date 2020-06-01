@@ -67,7 +67,7 @@ namespace Custom_List_Project
             count++;
         }
 
-        List
+       
 
         //public void AddItemToArray()
         //{
@@ -93,12 +93,19 @@ namespace Custom_List_Project
         {
            if (count >= capacity)
            {
-                item.remove(customList);
+                customList[count] = item;
+               
 
            }
-            
 
-           
+            if (count == capacity)
+            {
+                T[] newCustomListArray = new T[capacity * 2];
+            }
+
+            
+            count++;
+
 
         }
 
